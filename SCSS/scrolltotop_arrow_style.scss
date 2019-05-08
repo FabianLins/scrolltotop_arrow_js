@@ -1,0 +1,84 @@
+/*Style sheet of the Responsive JavaScript ScrollToTop Arrow by Fabian Lins*/
+
+/*Colors*/
+
+/*The property of the colors is declared as background, NOT as background-color!*/
+/*This means you can use hex codes (like in the example) but you can also make use of rgb(a) and gradients.*/
+
+    /*scrolltotop box colors*/
+
+    $scrolltotop_background_color:#006f9e;
+    $scrolltotop_triangle_color: white;
+
+/*Sizes*/
+
+    $change_scrolltotop_to_mobile_view:1023px;
+
+    /*Sizes of the rectanlge (social media icons)*/
+    $scrolltotop_box_size:50px;
+    $scrolltotop_rounded_corners:5px;
+    $scrolltotop_arrow_size:12px;
+        /*TIP! You can use the same position as the $scrolltotop_box_size.*/
+    $scrolltotop_bottom_position:$scrolltotop_box_size;
+        /*TIP! You can use the same position as the $scrolltotop_bottom_position.*/
+    $scrolltotop_right_position:$scrolltotop_bottom_position;
+    /*Change this variable to adjust the speed of the fading.*/
+        $scrolltotop_animation_speed:0.5s;
+
+    $scrolltotop_hover_opacity:0.7;
+    $opacity_transition_duration: 0.1s;
+
+@media only screen and (max-width: $change_scrolltotop_to_mobile_view){
+  #scrolltotop_parent{
+    bottom:$scrolltotop_bottom_position/2!important;
+    right:$scrolltotop_right_position/2!important;
+  }
+}
+
+#scrolltotop_parent{
+  background:$scrolltotop_background_color;
+  cursor:pointer;
+  width: $scrolltotop_box_size;
+  height: $scrolltotop_box_size;
+  position:fixed;
+  bottom:$scrolltotop_bottom_position;
+  right:$scrolltotop_right_position;
+  z-index: 1004!important;
+    &:hover{
+      opacity: $scrolltotop_hover_opacity;
+      transition: $opacity_transition_duration;
+    }
+}
+
+.scrolltotop_circle{
+  border-radius: 50%;
+}
+
+.scrolltotop_round_corners{
+  border-radius: $scrolltotop_rounded_corners;
+}
+
+.scrolltotop_fadeout{
+  opacity:0!important;
+  transition:$scrolltotop_animation_speed;
+  visibility: hidden;
+}
+
+.scrolltotop_fadein{
+  opacity:1;
+  transition:$scrolltotop_animation_speed;
+}
+
+#scrolltotop_arrow{
+  width:0px;
+  height:0px;
+  border-left:$scrolltotop_arrow_size solid transparent;
+  border-right:$scrolltotop_arrow_size solid transparent;
+  border-bottom:$scrolltotop_arrow_size solid $scrolltotop_triangle_color;
+  margin: 0 auto;
+  margin-top:($scrolltotop_box_size/2)-($scrolltotop_arrow_size/2);
+    &:focus{
+      opacity: $scrolltotop_hover_opacity;
+      transition: $opacity_transition_duration;
+    }
+}
