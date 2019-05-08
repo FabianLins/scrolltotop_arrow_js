@@ -1,0 +1,56 @@
+@media only screen and (max-width: 1023px) {
+  #scrolltotop_parent {
+    bottom: 25px !important;
+    right: 25px !important;
+  }
+}
+
+#scrolltotop_parent {
+  background: #006f9e;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 1004 !important;
+}
+
+#scrolltotop_parent:hover {
+  opacity: 0.7;
+  transition: 0.1s;
+}
+
+.scrolltotop_circle {
+  border-radius: 50%;
+}
+
+.scrolltotop_round_corners {
+  border-radius: 5px;
+}
+
+.scrolltotop_fadeout {
+  opacity: 0 !important;
+  transition: 0.5s;
+  visibility: hidden;
+}
+
+.scrolltotop_fadein {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+#scrolltotop_arrow {
+  width: 0px;
+  height: 0px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid white;
+  margin: 0 auto;
+  margin-top: 19px;
+}
+
+#scrolltotop_arrow:focus {
+  opacity: 0.7;
+  transition: 0.1s;
+}
