@@ -46,7 +46,7 @@ But you are not allowed to claim this menu as your own menu.
 If you edit the code and change the plugin you are allowed to upload your version as long as you give credit to this project.
 
 If you have any questions feel free to write me an e-Mail:
-contact@fabianlins.com
+info@fabian-lins.com
 
 Thanks for your attention.
 
